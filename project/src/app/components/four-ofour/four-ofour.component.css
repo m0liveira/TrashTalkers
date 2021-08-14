@@ -1,0 +1,132 @@
+section {
+  position: relative;
+  background: #121e2b;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* background img  with opacity */
+section::before {
+  content: "";
+  position: absolute;
+  background: url("https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+/* box with the text */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+/* first text */
+.box h1 {
+  color: #f5f9ff;
+  font-size: 10vw;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  margin-bottom: 3%;
+}
+
+/* second text */
+.box h2 {
+  color: #e7ebf2;
+  font-size: 2vw;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1%;
+}
+
+/* third text */
+.box p {
+  font-size: 1.3vw;
+}
+
+/* go to main menu text */
+p {
+  color: #ccc;
+  font-size: 1.2vw;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+
+/* random class for my paragraph */
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+/* link */
+a {
+  position: relative;
+  font-size: 1.3vw;
+  color: white;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  padding-left: 0.5%;
+  cursor: pointer;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 10%;
+  background: white;
+  width: 85%;
+  height: 5%;
+}
+
+/* main character */
+.img-container {
+  position: absolute;
+  top: 80%;
+  left: 83%;
+  width: 7%;
+  height: 15%;
+  animation: float 15s linear infinite forwards;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@keyframes float {
+  0% {
+    top: 50%;
+    left: 125%;
+    transform: rotate(360deg);
+  }
+  25% {
+    top: 110%;
+    left: 50%;
+    transform: rotate(-360deg);
+  }
+  50% {
+    top: 50%;
+    left: -25%;
+    transform: rotate(360deg);
+  }
+  75% {
+    top: -25%;
+    left: 50%;
+    transform: rotate(-360deg);
+  }
+  100% {
+    top: 50%;
+    left: 125%;
+    transform: rotate(360deg);
+  }
+}
