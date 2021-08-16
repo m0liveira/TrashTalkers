@@ -1,0 +1,105 @@
+section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img-container {
+  position: absolute;
+  top: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 40%;
+}
+
+.img-container img {
+  object-fit: fill;
+  width: 34%;
+  height: 100%;
+}
+
+.img-container:nth-of-type(2) {
+  position: absolute;
+  top: 65%;
+  left: -10%;
+  width: 10%;
+  height: 20%;
+  animation: walk 5s linear infinite forwards;
+}
+
+.img-container:nth-of-type(2) img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+/* button menu */
+.btnMenu{
+  position: absolute;
+  top: 10%;
+  left: 36%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  height: 50%;
+}
+
+.btnMenu a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: black;
+  font-family: var(--pixel);
+  font-size: 1.3vw;
+  text-decoration: none;
+  border-radius: .3rem;
+  border: none;
+  width: 75%;
+  height: 15%;
+  cursor: pointer;
+  transition: background 200ms ease-in-out;
+}
+
+.btnMenu a:hover{
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.btnMenu a:active{
+  transform: translateY(-2px);
+}
+
+/* independent class */
+.changeColor {
+  background: #000e1b;
+  transition: background 500ms ease-in-out;
+}
+
+.changeColor2 {
+  background: #00a2e2;
+  transition: background 500ms ease-in-out;
+}
+
+/* animations */
+@keyframes walk {
+  0% {
+    opacity: 1;
+    left: -10%;
+  }
+  90% {
+    left: 110%;
+  }
+  95% {
+    opacity: 0;
+    left: -10%;
+  }
+  100% {
+    left: -10%;
+  }
+}
+
+/* */

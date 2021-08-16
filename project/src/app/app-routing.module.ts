@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FourOfourComponent } from './components/four-ofour/four-ofour.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { CreateCharComponent } from './components/create-char/create-char.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/FourOFour',
+    redirectTo: '/MainMenu',
     pathMatch: 'full',
+  },
+  {
+    path: 'MainMenu',
+    component: MainMenuComponent,
   },
   {
     path: 'FourOFour',
     component: FourOfourComponent,
+  },
+  {
+    path: 'charCreator',
+    component: CreateCharComponent,
   },
   {
     path: '**',
