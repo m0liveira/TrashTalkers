@@ -1,3 +1,16 @@
-<section>
-  
+<section [ngClass]="isNight ? 'changeColor' : 'changeColor2'">
+  <div class="img-container">
+    <img src="../../../assets/media/mainMenu.png" alt="grass">
+    <img src="../../../assets/media/mainMenu.png" alt="grass">
+    <img src="../../../assets/media/mainMenu.png" alt="grass">
+  </div>
+
+  <div class="img-container">
+    <img src="../../../assets/media/mainCharacter/right walking.gif" alt="">
+  </div>
+
+  <div class="box">
+    <input #name type="text" placeholder="Enter your name here...">
+    <a [routerLink]="['/Town']" (click)="giveName(name)">Start Game</a>
+  </div>
 </section>

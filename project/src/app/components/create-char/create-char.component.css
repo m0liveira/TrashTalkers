@@ -1,5 +1,134 @@
-section{
+section {
+  position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
-/*  */
+.img-container {
+  position: absolute;
+  top: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 40%;
+}
+
+.img-container img {
+  object-fit: fill;
+  width: 34%;
+  height: 100%;
+}
+
+.img-container:nth-of-type(2) {
+  position: absolute;
+  top: 65%;
+  left: -10%;
+  width: 10%;
+  height: 20%;
+  animation: walk 5s linear infinite forwards;
+}
+
+.img-container:nth-of-type(2) img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 35%;
+  height: 25%;
+}
+
+.box input{
+  font-family: var(--pixel);
+  font-size: 1vw;
+  border-radius: 0.3rem;
+  border: none;
+  width: 100%;
+  height: 20%;
+  padding: 0 1rem;
+}
+
+.box input::placeholder{
+  color: #000e1b;
+  font-size: .8vw;
+  padding: 0 .5rem;
+}
+
+.box a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  border: 2px solid white;
+  border-radius: .3rem;
+  font-family: var(--pixel);
+  font-size: 1.1vw;
+  text-decoration: none;
+  width: 40%;
+  height: 25%;
+  cursor: pointer;
+  transition: background 200ms ease-in-out;
+}
+
+.box a:hover{
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.box a:active{
+  transform: translateY(-2px);
+}
+
+
+.box a::after{
+  content: "leaving this blank will call your character 'Rex'";
+  position: absolute;
+  top: -200%;
+  left: -65%;
+  color: rgb(184, 3, 3);
+  font-size: 1vw;
+  width: 200%;
+  height: 20%;
+}
+
+/* independent class */
+.changeColor {
+  background: #000e1b;
+  transition: background 500ms ease-in-out;
+}
+
+.changeColor2 {
+  background: #00a2e2;
+  transition: background 500ms ease-in-out;
+}
+
+/* animations */
+@keyframes walk {
+  0% {
+    opacity: 1;
+    left: -10%;
+  }
+  90% {
+    left: 110%;
+  }
+  95% {
+    opacity: 0;
+    left: -10%;
+  }
+  100% {
+    left: -10%;
+  }
+}
+
+/* */
+

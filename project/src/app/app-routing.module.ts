@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FourOfourComponent } from './components/four-ofour/four-ofour.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { CreateCharComponent } from './components/create-char/create-char.component';
+import { TownComponent } from './components/firstTown/town/town.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'charCreator',
     component: CreateCharComponent,
+  },
+  {
+    path: 'Town',
+    component: TownComponent,
   },
   {
     path: '**',
